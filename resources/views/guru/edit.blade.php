@@ -15,7 +15,7 @@
 
 <body>
 
-    <div class="container h-100 " style="margin-top: 5%">
+    <div class="container h-100 " style="margin-top: 15%">
         <div class="row align-items-center h-100">
             <div class="col-6 mx-auto">
 
@@ -37,56 +37,42 @@
                         <div class="col-sm">
                         </div>
                         <div class="col-sm">
-                            <h3>reservasi</h3>
+                            <h3>Ubah Jadwal Konseling</h3>
 
                             <div class="card p-3" style="background-color: white; width : 380px;">
-                                @foreach ($jadwal as $j)
-                                <form action="/murid/reservasi/{{ $j->id_jadwal}}" method="post" enctype="multipart/form-data">
+                                <form action="/guru/store" method="post" enctype="multipart/form-data">
                                     {{ csrf_field() }}
 
-                                    <div class="form-floating"> 
-                                        <input required type="hidden" name="id" class="form-control"
-                                        id="id" value="{{ $j->id_jadwal }}" readonly>
-                                    </div>
 
-                                    <div class="form-floating">
-                                        <label for="floatingInputGrid">Nama Guru</label>
-                                        <input required type="text" name="nama_guru" class="form-control"
-                                        id="nama_guru" value="{{ $j->nama_guru }}" readonly>
-                                    </div>
+                                    @foreach ($jadwal as $j)
+                                        Nama Guru
+                                        <select name="nama_guru" id="nama_guru" class="form-control mb-3">
+                                            {{-- <option selected class="form-select form-check disabled text-muted"
+                                                aria-label="disabled select example" disabled>Nama Anda</option> --}}
+                                            <option value='{{ $j->nama_guru }}' disabled selected> {{ $j->nama_guru }}
+                                            </option>
+                                            {{-- <option value='Bu Sarah'> Bu Sarah</option> --}}
+                                        </select>
 
-                                    <div class="form-floating">
-                                        <label for="floatingInputGrid">Nama Siswa</label>
-                                        <input required type="text" name="nama_murid" class="form-control"
-                                        id="nama_murid" value="">
-                                    </div>
+                                        <div class="form-floating">
+                                            <label for="floatingInputGrid">Tanggal</label>
+                                            <input required type="date" name="tanggal" class="form-control"
+                                                id="tanggal" value="{{ $j->tanggal }}">
+                                        </div>
 
-                                    <div class="form-floating">
-                                        <label for="floatingInputGrid">Tanggal</label>
-                                        <input required type="date" name="tanggal" class="form-control"
-                                        id="tanggal" value="{{ $j->tanggal }}" readonly>
-                                    </div>
+                                        <div class="form-floating" style="margin-top: 10px">
 
-                                    Jam
-                                    <div class="form-floating" style="margin-top: 10px">
+                                            <label for="floatingInputGrid">Jam</label>
+                                            <input required type="time" name="jam" class="form-control" id="jam"
+                                                value="{{ $j->jam }}">
+                                        </div>
 
-                                        <input required type="time" name="jam" class="form-control"
-                                        id="jam" value="{{ $j->jam }}" style="" readonly>
-                                    </div>
-
-                                    <div class="form-floating">
-                                        <label for="floatingInputGrid">keterangan</label>
-                                        <textarea required name="keterangan" class="form-control"
-                                        id="keterangan" value=""></textarea>
-                                    </div>
-
-                                    <div class="col mt-3">
-                                        <a href=""> Kembali</a>
-                                        <input class="btn btn-success ml-3" type="submit" value="Simpan Data">
-                                    </div>
-
+                                        <div class="col mt-3">
+                                            <a href=""> Kembali</a>
+                                            <input class="btn btn-success ml-3" type="submit" value="Simpan Data">
+                                        </div>
+                                    @endforeach
                                 </form>
-                                @endforeach
                             </div>
 
                         </div>

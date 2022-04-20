@@ -9,9 +9,22 @@ class GuruController extends Controller
 {
     public function index()
     {
+        return view('guru.home');
+    }
+
+    public function jadwal()
+    {
+
+        $jadwal = DB::table('tb_reservasi')->get();
+
+        return view('guru.jadwal', compact('jadwal'));
+    }
+
+    public function dashboard()
+    {
         $jadwal = DB::table('tb_jadwal')->get();
 
-        return view('guru.home', compact('jadwal'));
+        return view('guru.dashboard', compact('jadwal'));
     }
 
     public function tambah()
@@ -56,5 +69,22 @@ $hari = date_format($date,"l");
         ]);
 
         return redirect()->route('guru.home');
+    }
+
+    public function edit(Request $request)
+    {
+        DB::table('tb_jadwal')->where('id_jadwal', $request->id)->update([
+            'hari' => 'a',
+            'jam' => $request->jam,
+            'tanggal' => $request->tanggal,
+            'status' => '   '
+        ]);
+    }
+
+    public function reschedule($id)
+    {
+        $jadwal = DB::table('tb_jadwal')->where('id_jadwal', $id)->get();
+
+        return view('guru.edit', compact('jadwal'));
     }
 }

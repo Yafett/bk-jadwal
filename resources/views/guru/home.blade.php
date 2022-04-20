@@ -15,94 +15,23 @@
 
 <body>
 
-    <div class="container h-100" style="margin-top: 5%">
-        <div class="row">
-            <div class="col mx-auto">
 
+    <div class="container h-100 text-center">
+        <div class="row align-items-center h-100">
+            <div class="col-6 mx-auto">
 
-                <div class="container">
-
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <strong>Maaf</strong> Data yang anda inputkan bermasalah.<br><br>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">Nama Guru</th>
-                                <th scope="col">Hari</th>
-                                <th>Tanggal</th>
-                                <th scope="col">Pukul</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($jadwal as $i => $j)
-                                <tr>
-                                    {{-- <td>{{ ++$i }}</td> --}}
-                                    <td>{{ $j->nama_guru }}</td>
-                                    <td>
-                                        @if ($j->hari == 'Monday')
-                                            Senin
-                                        @elseif ($j->hari == 'Tuesday')
-                                            Selasa
-                                        @elseif ($j->hari == 'Wednesday')
-                                            Rabu
-                                        @elseif ($j->hari == 'Thursday')
-                                            Kamis
-                                        @elseif ($j->hari == 'Friday')
-                                            Jumat
-                                        @elseif ($j->hari == 'Saturday')
-                                            Sabtu
-                                        @elseif ($j->hari == 'Sunday')
-                                            Minggu
-                                        @endif
-                                    </td>
-                                    <td>{{ $j->tanggal }}</td>
-                                    <td>{{ $j->jam }}</td>
-                                    <td>
-                                        @if ($j->status == 'a')
-                                            <span class="badge badge-secondary">kosong</span>
-                                        @elseif ($j->status == 'b')
-                                            <span class="badge badge-info">dijadwalkan</span>
-                                        @elseif ($j->status == 'c')
-                                            <span class="badge badge-success">sudah</span>
-                                        @elseif ($j->status == 'd')
-                                            <span class="badge badge-secondary">dibatalkan</span>
-                                        @endif
-
-                                    </td>
-                                    <td>
-                                        <form action="/guru/sudah/{{ $j->id_jadwal }}" method="post">
-                                            {{ csrf_field() }}
-                                            <input class="btn btn-success" type="submit" value="sudah">
-                                        </form>
-
-                                        <form action="/guru/batal/{{ $j->id_jadwal }}" method="post">
-                                            {{ csrf_field() }}
-                                            <input class="btn btn-secondary" type="submit" value="batalkan">
-                                        </form>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-
-
+                <div class="display-4" style="margin-top: 50%">
+                    Reservasi Online BK
                 </div>
+                <div class="d-flex justify-content-center">
+                    <a type="button" href="/guru/dashboard" class="btn btn-outline-primary ml-2">atur jadwal</a>
+                    <a type="button" href="/guru/dashboard" class="btn btn-outline-success ml-2">jadwal konseling</a>
+                    <a type="button" href="" class="btn btn-outline-secondary ml-2">laporan</a>
+                </div>
+
             </div>
         </div>
     </div>
-
-
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

@@ -23,8 +23,8 @@
                     Reservasi Online BK
                 </div>
                 <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-outline-primary">Bu Lina</button>
-                    <button type="button" class="btn btn-outline-secondary">Bu Sarah</button>
+                    <a type="button" href="/murid/jadwal/bulina" class="btn btn-outline-primary">Bu Lina</a>
+                    <a type="button" href="/murid/jadwal/busarah" class="btn btn-outline-secondary">Bu Sarah</a>
                 </div>
 
             </div>

@@ -55,7 +55,7 @@
     <link href="offcanvas.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-color: #41a5f7">
     @php
         function tgl_indo($tanggal)
         {
@@ -88,24 +88,37 @@
         <div class="my-3 p-3 bg-white rounded shadow-sm">
             <h6 class="border-bottom border-gray pb-2 mb-0">Senin</h6>
 
-            @foreach ($senin as $s)
-                <div class="media text-muted pt-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+            @if (!$senin->isEmpty())
+                @foreach ($senin as $s)
+
+                        <div class="media text-muted pt-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
                         class="bi bi-calendar mr-2" viewBox="0 0 16 16">
                         <path
                             d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
                     </svg>
 
-                    <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                        <div class="d-flex justify-content-between align-items-center w-100">
-                            <strong class="text-gray-dark">{{ $s->nama_guru }}</strong>
-                            <a href="/murid/ikuti/{{ $s->id_jadwal }}">Ikuti</a>
-                        </div>
-                        <span class="d-block"> ( {{ $s->jam }} )</span>
-                    </div>
-                </div>
-            @endforeach
+                            <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                <div class="d-flex justify-content-between align-items-center w-100">
+                                    <strong class="text-gray-dark">{{ tgl_indo($s->tanggal) }} </strong>
 
+                                    @if ($s->status == 'a')
+
+                                    <a href="/murid/ikuti/{{ $r->id_jadwal }}" style="text-decoration : none">Ikuti</a>
+                                    @else
+
+                                    <a href="#" style="color : red; text-decoration : none;">Tidak tersedia</a>
+                                    @endif
+                                </div>
+                                <span class="d-block">{{ $s->jam }}</span>
+                            </div>
+                        </div>
+                    @endforeach
+                @else
+                    <small style="color : rgb(187, 187, 187);">
+                        tidak tersedia
+                    </small>
+                @endif
         </div>
 
         <div class="my-3 p-3 bg-white rounded shadow-sm">
