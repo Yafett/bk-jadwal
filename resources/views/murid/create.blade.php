@@ -44,7 +44,7 @@
                                 <form action="/murid/reservasi/{{ $j->id_jadwal}}" method="post" enctype="multipart/form-data">
                                     {{ csrf_field() }}
 
-                                    <div class="form-floating"> 
+                                    <div class="form-floating">
                                         <input required type="hidden" name="id" class="form-control"
                                         id="id" value="{{ $j->id_jadwal }}" readonly>
                                     </div>
@@ -81,7 +81,7 @@
                                     </div>
 
                                     <div class="col mt-3">
-                                        <a href=""> Kembali</a>
+                                        <a href="{{route('murid.home') }}"> Kembali</a>
                                         <input class="btn btn-success ml-3" type="submit" value="Simpan Data">
                                     </div>
 

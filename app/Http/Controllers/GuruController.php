@@ -36,8 +36,8 @@ class GuruController extends Controller
     {
         // dd($request);
 
-$date=date_create($request->tanggal);
-$hari = date_format($date,"l");
+        $date=date_create($request->tanggal);
+        $hari = date_format($date,"l");
 // dd($a);
 
         DB::table('tb_jadwal')->insert([
@@ -50,7 +50,7 @@ $hari = date_format($date,"l");
             'updated_at' => date("Y-m-d H:i:s")
         ]);
 
-        return redirect()->route('guru.home');
+        return redirect()->route('guru.dashboard');
     }
 
     public function sudah($id)
@@ -59,7 +59,7 @@ $hari = date_format($date,"l");
             'status' => 'c'
         ]);
 
-        return redirect()->route('guru.home');
+        return redirect()->route('guru.dashboard');
     }
 
     public function batal($id)
@@ -68,17 +68,25 @@ $hari = date_format($date,"l");
             'status' => 'd'
         ]);
 
-        return redirect()->route('guru.home');
+        return redirect()->route('guru.dashboard');
     }
 
     public function edit(Request $request)
     {
+        $date=date_create($request->tanggal);
+        $hari = date_format($date,"l");
+
         DB::table('tb_jadwal')->where('id_jadwal', $request->id)->update([
-            'hari' => 'a',
+            'hari' => $hari,
             'jam' => $request->jam,
             'tanggal' => $request->tanggal,
-            'status' => '   '
+            'status' => 'a'
         ]);
+
+        $jadwal = DB::table('tb_jadwal')->get();
+
+        return redirect()->route('guru.dashboard', compact('jadwal'));
+        // return view('guru.dashboard', compact('jadwal'));
     }
 
     public function reschedule($id)

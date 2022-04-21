@@ -11,21 +11,37 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+
+    <style>
+          body {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('image/smk.jpg');
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+    </style>
 </head>
 
 <body>
-
-
+    <a style="color : grey" class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+    document.getElementById('logout-form').submit();">
+        {{ __('Logout') }}
+    </a>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+        @csrf
+    </form>
     <div class="container h-100 text-center">
         <div class="row align-items-center h-100">
             <div class="col-6 mx-auto">
 
-                <div class="display-4" style="margin-top: 50%">
+                <div class="display-4 text-white" style="margin-top: 50%">
                     Reservasi Online BK
                 </div>
                 <div class="d-flex justify-content-center">
                     <a type="button" href="/guru/dashboard" class="btn btn-outline-primary ml-2">atur jadwal</a>
-                    <a type="button" href="/guru/dashboard" class="btn btn-outline-success ml-2">jadwal konseling</a>
+                    <a type="button" href="/guru/jadwal" class="btn btn-outline-success ml-2">riwayat konseling</a>
                     <a type="button" href="" class="btn btn-outline-secondary ml-2">laporan</a>
                 </div>
 

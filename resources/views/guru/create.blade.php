@@ -15,7 +15,7 @@
 
 <body>
 
-    <div class="container h-100 " style="margin-top: 15%">
+    <div class="container h-100 " style="margin-top: 10%">
         <div class="row align-items-center h-100">
             <div class="col-6 mx-auto">
 
@@ -67,7 +67,7 @@
                                     </div>
 
                                     <div class="col mt-3">
-                                        <a href=""> Kembali</a>
+                                        <a href="{{ route('guru.dashboard')}}"> Kembali</a>
                                         <input class="btn btn-success ml-3" type="submit" value="Simpan Data">
                                     </div>
 

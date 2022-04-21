@@ -38,4 +38,5 @@ Route::post('/guru/store', [App\Http\Controllers\GuruController::class, 'store']
 Route::post('/guru/sudah/{id}', [App\Http\Controllers\GuruController::class, 'sudah']);
 Route::post('/guru/batal/{id}', [App\Http\Controllers\GuruController::class, 'batal']);
 Route::post('/guru/reschedule/{id}', [App\Http\Controllers\GuruController::class, 'reschedule']);
+Route::post('/guru/edit/{id}', [App\Http\Controllers\GuruController::class, 'edit']);
 

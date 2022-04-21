@@ -40,16 +40,16 @@
                             <h3>Ubah Jadwal Konseling</h3>
 
                             <div class="card p-3" style="background-color: white; width : 380px;">
-                                <form action="/guru/store" method="post" enctype="multipart/form-data">
+                                @foreach ($jadwal as $j)
+                                <form action="/guru/edit/{{ $j->id_jadwal }}" method="post" enctype="multipart/form-data">
                                     {{ csrf_field() }}
 
 
-                                    @foreach ($jadwal as $j)
                                         Nama Guru
                                         <select name="nama_guru" id="nama_guru" class="form-control mb-3">
                                             {{-- <option selected class="form-select form-check disabled text-muted"
                                                 aria-label="disabled select example" disabled>Nama Anda</option> --}}
-                                            <option value='{{ $j->nama_guru }}' disabled selected> {{ $j->nama_guru }}
+                                            <option value='{{ $j->nama_guru }}' readonly selected> {{ $j->nama_guru }}
                                             </option>
                                             {{-- <option value='Bu Sarah'> Bu Sarah</option> --}}
                                         </select>
@@ -68,7 +68,7 @@
                                         </div>
 
                                         <div class="col mt-3">
-                                            <a href=""> Kembali</a>
+                                            <a href="{{ route('guru.dashboard')}}"> Kembali</a>
                                             <input class="btn btn-success ml-3" type="submit" value="Simpan Data">
                                         </div>
                                     @endforeach
