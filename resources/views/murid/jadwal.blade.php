@@ -55,7 +55,7 @@
     <link href="offcanvas.css" rel="stylesheet">
 </head>
 
-<body >
+<body style="background-color: #e1e7f6">
     {{-- <body style="background-color: #41a5f7"> --}}
     @php
         function tgl_indo($tanggal)
@@ -88,7 +88,7 @@
         <div class="display-4" style="margin-bottom: 5%; margin-top: 5%;">
             <a href="{{ route('murid.home')}}" style="color: black"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-               </svg></a> Jadwal Bimbingan Konseling
+               </svg></a> Jadwal Konseling
          </div>
         <div class="my-3 p-3 bg-white rounded shadow-sm">
             <h6 class="border-bottom border-gray pb-2 mb-0">Senin</h6>
@@ -145,7 +145,7 @@
 
                                     @if ($se->status == 'a')
 
-                                    <a href="/murid/ikuti/{{ $r->id_jadwal }}" style="text-decoration : none">Ikuti</a>
+                                    <a href="/murid/ikuti/{{ $se->id_jadwal }}" style="text-decoration : none">Ikuti</a>
                                     @else
 
                                     <a href="#" style="color : red; text-decoration : none;">Tidak tersedia</a>

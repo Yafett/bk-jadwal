@@ -38,7 +38,7 @@
                            </svg></a>  Atur Jadwal
                      </div>
 
-                    <a href="/guru/tambah" type="button" class="btn btn-primary mb-3">tambah jadwal</a>
+                    <a href="/guru/tambah" type="button" class="btn btn-primary mb-3">Tambah Jadwal</a>
 
                     <table class="table table-striped">
                         <thead>
@@ -77,13 +77,13 @@
                                     <td>{{ $j->jam }}</td>
                                     <td>
                                         @if ($j->status == 'a')
-                                            <span class="badge badge-secondary">kosong</span>
+                                            <span class="badge badge-secondary">Kosong</span>
                                         @elseif ($j->status == 'b')
-                                            <span class="badge badge-info">dijadwalkan</span>
+                                            <span class="badge badge-info">Dijadwalkan</span>
                                         @elseif ($j->status == 'c')
-                                            <span class="badge badge-success">sudah</span>
+                                            <span class="badge badge-success">Sudah</span>
                                         @elseif ($j->status == 'd')
-                                            <span class="badge badge-secondary">dibatalkan</span>
+                                            <span class="badge badge-secondary">Dibatalkan</span>
                                         @endif
 
                                     </td>

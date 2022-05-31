@@ -37,7 +37,7 @@
                         <div class="col-sm">
                         </div>
                         <div class="col-sm">
-                            <h3>reservasi</h3>
+                            <h3>Reservasi</h3>
 
                             <div class="card p-3" style="background-color: white; width : 380px;">
                                 @foreach ($jadwal as $j)
@@ -75,7 +75,7 @@
                                     </div>
 
                                     <div class="form-floating">
-                                        <label for="floatingInputGrid">keterangan</label>
+                                        <label for="floatingInputGrid">Keterangan</label>
                                         <textarea required name="keterangan" class="form-control"
                                         id="keterangan" value=""></textarea>
                                     </div>

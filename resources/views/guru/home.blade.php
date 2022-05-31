@@ -14,7 +14,7 @@
 
     <style>
           body {
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('image/smk.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('image/smk.jpg');
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -36,7 +36,7 @@
         <div class="row align-items-center h-100">
             <div class="col-6 mx-auto">
 
-                <div class="display-4 text-white" style="margin-top: 50%">
+                <div class="display-4 text-white" style="margin-top: 60%; margin-bottom : 5%; font-weight ">
                     Reservasi Online BK
                 </div>
                 <div class="d-flex justify-content-center">

@@ -17,7 +17,7 @@
 
         <div class="text-center">
             <div class="" style="font-size: 26px">
-                LAPORAN PELAKSANAAN LAYANAN  <br> KONSELING INDIVIDUAL <br> SMK BAGIMU NEGERIKU, SEMARANG <br> Semester (ganjil/genap), Tahun Pelajaran 2021/2022
+                LAPORAN PELAKSANAAN LAYANAN  <br> KONSELING INDIVIDUAL <br> SMK BAGIMU NEGERIKU, SEMARANG <br> Semester (ganjil/genap), Tahun Pelajaran -
             </div>
 
             <hr color="black" style="width:80%;text-align:center; height : 3px">
@@ -33,35 +33,43 @@
             <li>Pendekatan yang digunakan</li>
             <li>Proses Konseling</li>
         </ol>
-        <table class="table table-bordered">
+
+        <table class="table table-bordered" style="width: 70%; margin-left : 150px">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Permasalahan</th>
+                <th scope="col">Hasil</th>
+                <th scope="col">Saran/Solusi</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
               </tr>
               <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr><tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
             </tbody>
           </table>
+
+          <div class="" style="margin-left: 150px"> Catatan BK :</div>
+          <br><br><br>
+
+        <div class="row">
+            <div class="" style="text-align: left; margin-left : 170px">
+                Mengetahui <br> Kepala Sekolah <br> <br><br> <br><br>  Drs. Christianus Dwi Estafianto
+            </div><div class="" style="text-align: left; margin-left : 300px">
+                Mengetahui <br> Guru BK/Konselor <br> <br><br> <br><br>
+            </div>
+        </div>
 
     </div>
 

@@ -30,7 +30,7 @@ class MuridController extends Controller
 
         $rabu = DB::table('tb_jadwal')->where('hari', 'Wednesday')->where('nama_guru', 'Bu Sarah')->get();
 
-        // dd($tes);
+        // dd($rabu);
 
         return view('murid.jadwal', compact('jadwal', 'senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu', 'minggu'));
     }
