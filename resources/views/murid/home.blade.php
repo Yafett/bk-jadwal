@@ -176,7 +176,7 @@
         <div class="container-fluid contenedor text-center" style=" margin-left : 10%; margin-top : -5%">
             <div class=" container text-center">
 
-                <div style="height: 400px; width : 250px; margin-left : 10%;" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto " href="/murid/jadwal/busarah">
+                <div style="height: 400px; width : 250px; margin-left : 15%;" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto " href="/murid/jadwal/busarah">
                     <div class="ver_mas text-center">
                         <span class="lnr lnr-eye"></span>
                     </div>
@@ -188,7 +188,7 @@
                         alt="">
                 </div>
 
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto "  style=" margin-left : 35%; margin-top : -36.5%; height: 400px; width : 250px">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto "  style=" margin-left : 40%; margin-top : -36.5%; height: 400px; width : 250px">
                     <div class="ver_mas text-center" style=" margin-right : 35%">
                         <span id="click" class="lnr lnr-eye"></span>
                     </div>
